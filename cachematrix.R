@@ -1,7 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Demonstration of how to lazy cache a computed value for future use.
 
-## Write a short comment describing this function
 ## Stores a matrix with cacheable inverse
 makeCacheMatrix <- function(x = matrix()) {
 	inv = NULL;
@@ -19,7 +17,6 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
 ## returns the inverse of matrix x, and saves to avoid recalculating
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
@@ -30,4 +27,5 @@ cacheSolve <- function(x, ...) {
         	inv = solve(x$get())
         	x$setinverse(inv)
         }
+        inv
 }
